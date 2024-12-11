@@ -35,12 +35,19 @@ This repository contains a **Web Application Firewall (WAF_AI)** that integrates
 - **Scikit-learn**: Install scikit-learn if you plan to train your own models (`pip install scikit-learn`).
 
 ### Running the Application
+- Installation via pip :
+Install the latest release from PyPI:
+   ```bash
+   pip install WAF-AI
+   ```
 
-1. Clone the repository:
+- Clone the repository:
+For development or accessing the latest features, clone the repository:
+
    ```bash
    git clone https://github.com/chouaibcher/WAF_AI.git
    cd WAF_AI
-
+   ```
 
 ### Key Updates:
 - Added **SQL** Injection detection.
@@ -53,6 +60,7 @@ This repository contains a **Web Application Firewall (WAF_AI)** that integrates
 If you reuse it, please mention us to avoid any problems
 </br>
 https://www.kaggle.com/datasets/chouaibcher/sql-injection-dataset
+
 
 # Contributing
 We welcome contributions to improve this project! If you'd like to help, please refer to the  `CONTRIBUTING.md`  file for guidelines on how to contribute.
