@@ -17,8 +17,9 @@ setup(
     url='https://github.com/chouaibcher/WAF-AI',
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License ::  Apache-2.0 license ",
+        "License ::   OSI Approved :: Apache Software License ",
         "Operating System :: OS Independent",
     ],
+
     python_requires='>=3.6',
 )
