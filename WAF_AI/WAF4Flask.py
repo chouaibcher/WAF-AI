@@ -55,7 +55,7 @@ def rusicadeWAF_AI(app):
         preprocessed_path = preprocess_path(path, WAF_AI.vectorizer)
 
         # Detect SQL injection
-        if WAF_AI.detect(preprocessed_path):
+        if WAF_AI.detect(preprocessed_path,client_ip):
             return """
             <html>
                 <head><title>Access Denied :Rusicade WAF_AI</title></head>

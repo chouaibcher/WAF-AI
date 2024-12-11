@@ -55,7 +55,7 @@ class RusicadeWAF_AIMiddleware:
         preprocessed_path = preprocess_path(path, self.WAF_AI.vectorizer)
 
         # Detect SQL injection
-        if self.WAF_AI.detect(preprocessed_path):
+        if self.WAF_AI.detect(preprocessed_path,client_ip):
             return HttpResponse("""
                 <html>
                     <head><title>Access Denied :Rusicade WAF_AI</title></head>

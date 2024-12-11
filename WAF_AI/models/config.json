@@ -5,7 +5,7 @@
     "enable_logging": true,
     "alert_email": "WAF_AI@rusicade.net",
     "enable_email_alerts": false,
-    "whitelisted_ips": ["127.0.0.1"],
+    "whitelisted_ips": ["127.0.0.1","0.0.0.0"],
     "enable_rate_limiting": true,
     "rate_limit": 100
 }
