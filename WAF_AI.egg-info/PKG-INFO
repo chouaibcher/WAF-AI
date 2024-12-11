@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: WAF_AI
+Version: 0.1.0
+Summary: Web application firewall using AI
+Home-page: https://github.com/chouaibcher/WAF-AI
+Author: CHERIBET CHERIF CHOUAIB
+Author-email: chouaibcher@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flask
+Requires-Dist: django
+Requires-Dist: numpy
+
+# WAF_AI-AI: Web Application Firewall with Artificial Intelligence
+## Overview
+
+This repository contains a **Web Application Firewall (WAF_AI)** that integrates **Artificial Intelligence** to detect and mitigate security threats in real-time. The system utilizes pre-trained models to analyze HTTP traffic and automatically block potentially malicious requests.
+
+## Features
+
+- **Real-Time Threat Detection**: The system monitors incoming HTTP requests and detects SQL Injection, XSS, and other malicious patterns in real-time.
+- **Machine Learning Integration**: Pre-trained models are used for detecting attacks based on patterns within URL paths and query parameters.
+- **Extendable Framework**: The system can easily be extended to detect additional threats, such as command injection, file inclusion attacks, and more.
+
+## Technologies Used
+
+- **Flask**: A lightweight Python web framework used for building the WAF_AI application.
+- **Python**: Core programming language for the backend logic and model implementation.
+- **Machine Learning Models**: Pre-trained models for detecting SQL Injection and XSS, built using algorithms such as Random Forest, SVM, and Logistic Regression.
+- **Joblib**: Used for loading machine learning models efficiently.
+- **HTML/CSS**: Used for creating and styling the response page.
+- **Jinja2 Templates**: Templating engine for dynamically rendering HTML content.
+
+## Threat Detection
+
+### **Current Threats Detected**
+
+1. **SQL Injection**: This attack occurs when attackers inject malicious SQL code into a query, often leading to data leakage or unauthorized access to the database. 
+
+
+## Getting Started
+
+### Prerequisites
+
+- **Python 3.x**: Install Python if you don't have it.
+- **Flask**: Install Flask using `pip install flask`.
+- **Joblib**: Install Joblib using `pip install joblib`.
+- **Scikit-learn**: Install scikit-learn if you plan to train your own models (`pip install scikit-learn`).
+
+### Running the Application
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/chouaibcher/WAF_AI-AI.git
+   cd WAF_AI-AI
+
+
+### Key Updates:
+- Added **SQL** Injection detection.
+<img width="958" alt="image" src="https://github.com/user-attachments/assets/62a4143a-33f9-4bf3-be2c-012342154828">
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/91bbe2e5-cc04-41ef-83cd-c4ec6e3de819">
+
+
+
+# Used Dataset :
+If you reuse it, please mention us to avoid any problems
+</br>
+https://www.kaggle.com/datasets/chouaibcher/sql-injection-dataset
+
+# Contributing
+We welcome contributions to improve this project! If you'd like to help, please refer to the  `CONTRIBUTING.md`  file for guidelines on how to contribute.
+Don’t Hesitate to Contribute! If you have ideas for new features or improvements, feel free to fork the repository, make your changes, and submit a pull request. 
+Your help is highly appreciated in making this project better
+
+
