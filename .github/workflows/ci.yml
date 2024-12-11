@@ -53,12 +53,11 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade build twine
-
     # 4. Construire et publier la bibliothèque sur PyPI
     - name: Publish to PyPI
       env:
-        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
       run: |
         python -m build
         python -m twine upload dist/*
