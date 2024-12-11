@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='WAF-AI',                     # Nom de la bibliothèque
+    name='WAF_AI',                     # Nom de la bibliothèque
     version='0.1.0',                       # Version
     packages=find_packages(),              # Recherche automatique des packages
     install_requires=['flask',
