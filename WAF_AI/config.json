@@ -3,7 +3,7 @@
     "block_time": 60,
     "log_file": "logs.txt",
     "enable_logging": true,
-    "alert_email": "waf@rusicade.net",
+    "alert_email": "WAF_AI@rusicade.net",
     "enable_email_alerts": false,
     "whitelisted_ips": ["127.0.0.1"],
     "enable_rate_limiting": true,

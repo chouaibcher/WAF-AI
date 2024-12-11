@@ -15,7 +15,7 @@ class CustomUnpickler(pickle.Unpickler):
 def custom_tokenizer(text):
     return text.split()
 
-class WAF(ABC):
+class WAF_AI(ABC):
     def __init__(self,model_path,vectorizer_path):
         # Load the saved model and vectorizer
         self.model_path=model_path
@@ -39,7 +39,7 @@ class WAF(ABC):
     def detect(self, path):
         pass
 
-class SQLInjectionWAF(WAF):
+class SQLInjectionWAF_AI(WAF_AI):
     def detect(self, path):
         if path is None:
             return False  # No meaningful tokens, assume no SQL injection

@@ -2,7 +2,7 @@ import os
 import sys
 import ctypes
 from flask import Flask, jsonify
-from WAF import WAF4Flask 
+from WAF_AI import WAF4Flask 
 
 
 ## runing the flask app as admin -- start
@@ -37,10 +37,10 @@ if not is_admin():
 # Create Flask App
 app = Flask(__name__)
 
-# Adding WAF to Flask App -- start
-WAF4Flask.rusicadeWAF(app)
+# Adding WAF_AI to Flask App -- start
+WAF4Flask.rusicadeWAF_AI(app)
 
-# Adding WAF to Flask App -- end
+# Adding WAF_AI to Flask App -- end
 
 # Define Flask Routes
 @app.route('/')

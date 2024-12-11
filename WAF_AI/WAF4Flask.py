@@ -1,5 +1,5 @@
-from django.http import HttpResponse
-from WAF import SQLInjectionWAF
+from flask import request, jsonify
+from WAF_AI import SQLInjectionWAF_AI
 import os
 from urllib.parse import unquote
 import numpy as np
@@ -15,8 +15,9 @@ def preprocess_path(path, vectorizer):
         print(f"Decoded Path: {decoded_path}")  # Debugging
 
         # Extract the last segment of the path
-        last_segment = decoded_path.split('/')[-2] if '/' in decoded_path else decoded_path
+        last_segment = decoded_path.split('/')[-1]
         print(f"Last Segment: {last_segment}")  # Debugging
+        print(f' inside detect : {last_segment}')
 
         # Convert to a format suitable for the model
         if vectorizer:
@@ -37,14 +38,13 @@ def preprocess_path(path, vectorizer):
         print(f"Error during preprocessing: {e}")
         return None
 
-class RusicadeWAFMiddleware:
-    def __init__(self, get_response):
-        self.get_response = get_response
-        self.waf = SQLInjectionWAF(model_path, vectorizer_path)
+def rusicadeWAF_AI(app):
+    WAF_AI = SQLInjectionWAF_AI(model_path, vectorizer_path)
 
-    def __call__(self, request):
+    @app.before_request
+    def monitor_request():
         # Get the client's IP address
-        client_ip = request.META.get('REMOTE_ADDR')
+        client_ip = request.remote_addr
         print(f"Client IP: {client_ip}")  # Debugging
 
         # Get the URL path
@@ -52,20 +52,17 @@ class RusicadeWAFMiddleware:
         print(f"Checking URL: {path}")  # Debugging
 
         # Preprocess the path
-        preprocessed_path = preprocess_path(path, self.waf.vectorizer)
+        preprocessed_path = preprocess_path(path, WAF_AI.vectorizer)
 
         # Detect SQL injection
-        if self.waf.detect(preprocessed_path):
-            return HttpResponse("""
-                <html>
-                    <head><title>Access Denied :Rusicade WAF</title></head>
-                    <body>
-                        <h1 style="color:red"> Rusicade WAF - Web Application Firewall</h1>
-                        <h1>Error: Potential SQL Injection Detected!</h1>
-                        <p>Your request has been blocked due to suspicious activity.</p>
-                    </body>
-                </html>
-            """, status=400)  # Return HTML error page with 400 status code
-
-        response = self.get_response(request)
-        return response
+        if WAF_AI.detect(preprocessed_path):
+            return """
+            <html>
+                <head><title>Access Denied :Rusicade WAF_AI</title></head>
+                <body>
+                    <h1 style="color:red"> Rusicade WAF_AI - Web Application Firewall</h1>
+                    <h1>Error: Potential SQL Injection Detected!</h1>
+                    <p>Your request has been blocked due to suspicious activity.</p>
+                </body>
+            </html>
+            """, 400  # Return HTML error page with 400 status code

@@ -1,7 +1,7 @@
-# WAF-AI: Web Application Firewall with Artificial Intelligence
+# WAF_AI-AI: Web Application Firewall with Artificial Intelligence
 ## Overview
 
-This repository contains a **Web Application Firewall (WAF)** that integrates **Artificial Intelligence** to detect and mitigate security threats in real-time. The system utilizes pre-trained models to analyze HTTP traffic and automatically block potentially malicious requests.
+This repository contains a **Web Application Firewall (WAF_AI)** that integrates **Artificial Intelligence** to detect and mitigate security threats in real-time. The system utilizes pre-trained models to analyze HTTP traffic and automatically block potentially malicious requests.
 
 ## Features
 
@@ -11,7 +11,7 @@ This repository contains a **Web Application Firewall (WAF)** that integrates **
 
 ## Technologies Used
 
-- **Flask**: A lightweight Python web framework used for building the WAF application.
+- **Flask**: A lightweight Python web framework used for building the WAF_AI application.
 - **Python**: Core programming language for the backend logic and model implementation.
 - **Machine Learning Models**: Pre-trained models for detecting SQL Injection and XSS, built using algorithms such as Random Forest, SVM, and Logistic Regression.
 - **Joblib**: Used for loading machine learning models efficiently.
@@ -38,8 +38,8 @@ This repository contains a **Web Application Firewall (WAF)** that integrates **
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/chouaibcher/WAF-AI.git
-   cd WAF-AI
+   git clone https://github.com/chouaibcher/WAF_AI-AI.git
+   cd WAF_AI-AI
 
 
 ### Key Updates:

@@ -1,2 +1,2 @@
 include README.md
-include WAF/models/*.pkl
+include WAF_AI/models/*.pkl

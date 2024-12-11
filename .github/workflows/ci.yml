@@ -1,4 +1,4 @@
-name: CI Pipeline for WAF-AI
+name: CI Pipeline for WAF_AI-AI
 
 # Déclencheurs : push sur main et création de PR
 on:

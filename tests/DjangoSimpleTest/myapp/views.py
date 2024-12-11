@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("Welcome to the Django App! WAF testing , please go to /user/<username>")
+    return HttpResponse("Welcome to the Django App! WAF_AI testing , please go to /user/<username>")
 
 def user_profile(request, username):
     return HttpResponse(f"User: {username}")

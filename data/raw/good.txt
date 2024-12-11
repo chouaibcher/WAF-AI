@@ -7570,8 +7570,8 @@ vowel
 voyage
 wackiness
 wad
-wafer
-waffle
+WAF_AIer
+WAF_AIfle
 waged
 wager
 wages
