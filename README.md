@@ -1,7 +1,10 @@
 # WAF_AI: Web Application Firewall with Artificial Intelligence
-## Overview
 
+## Overview
 This repository contains a **Web Application Firewall (WAF_AI)** that integrates **Artificial Intelligence** to detect and mitigate security threats in real-time. The system utilizes pre-trained models to analyze HTTP traffic and automatically block potentially malicious requests.
+
+## Why ?
+AI-based web application firewalls (WAFs) are superior to rule-based ones because they adapt, learn from traffic patterns, and scale effortlessly, making them ideal for detecting complex threats. They tolerate unknown and evolving threats, whereas rule-based WAFs work best for simple, predefined attack signatures and fixed conditions.
 
 ### Running the Application
 
