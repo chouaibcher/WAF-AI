@@ -3,6 +3,21 @@
 
 This repository contains a **Web Application Firewall (WAF_AI)** that integrates **Artificial Intelligence** to detect and mitigate security threats in real-time. The system utilizes pre-trained models to analyze HTTP traffic and automatically block potentially malicious requests.
 
+### Running the Application
+- Installation via pip :
+Install the latest release from PyPI:
+   ```bash
+   pip install WAF-AI
+   ```
+
+- Clone the repository:
+For development or accessing the latest features, clone the repository:
+
+   ```bash
+   git clone https://github.com/chouaibcher/WAF_AI.git
+   cd WAF_AI
+   ```
+
 ## Features
 
 - **Real-Time Threat Detection**: The system monitors incoming HTTP requests and detects SQL Injection, XSS, and other malicious patterns in real-time.
@@ -34,20 +49,6 @@ This repository contains a **Web Application Firewall (WAF_AI)** that integrates
 - **Joblib**: Install Joblib using `pip install joblib`.
 - **Scikit-learn**: Install scikit-learn if you plan to train your own models (`pip install scikit-learn`).
 
-### Running the Application
-- Installation via pip :
-Install the latest release from PyPI:
-   ```bash
-   pip install WAF-AI
-   ```
-
-- Clone the repository:
-For development or accessing the latest features, clone the repository:
-
-   ```bash
-   git clone https://github.com/chouaibcher/WAF_AI.git
-   cd WAF_AI
-   ```
 
 ### Key Updates:
 - Added **SQL** Injection detection.
